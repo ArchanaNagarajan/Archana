@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+class Student{  
+	   int rollNo; 
+	   String name;  
+	   static final String college ="PSVPEC";  
+	  
+	   Student(){  
+       System.out.println("Enter the roll number");
+	   Scanner roll = new Scanner(System.in);
+	   rollNo = roll.nextInt();
+	   System.out.println("Enter the student name");
+	   Scanner studentName = new Scanner(System.in);
+	   name = studentName.next();  
+	   }  
+	   void check() {
+		   
+		   switch(rollNo) {
+		   
+		   case 4117106:{
+			   System.out.println("ECE department");
+			   break;
+		   }
+		   case 4117114:{
+			   System.out.println("Mechanical department");
+			   break;
+		   }
+		   case 4117112:{
+			   System.out.println("CSE department");
+			   break;
+		   }
+			default:{
+				System.out.println("You are not a student of psvpec");
+			}
+		   }
+	   }
+	   void display (){
+		   System.out.println();
+		   System.out.println(college); 
+		   System.out.println(rollNo);
+		   System.out.println(name);
+		    
+	   }  
+	}  
+	 
+	public class college{  
+	 public static void main(String args[]){  
+	 Student s1 = new Student();  
+	 //Student.college = "ANNA university";Static variable is changed in this way
+	  
+	 s1.display();  
+	 s1.check();
+	 }  
+	}
