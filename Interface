@@ -35,6 +35,7 @@ interface Bank {
 	   
 	 Account() {
 	  
+	         super();
 		 System.out.println("Enter the account number");
 		 Scanner accountNum = new Scanner(System.in);
 	     acc_no = accountNum.nextInt();
